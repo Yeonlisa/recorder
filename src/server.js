@@ -23,7 +23,7 @@ const sockets = [];
 
 wss.on("connection", (socket) => {
     sockets.push(socket);
-    socket["nickname"] = "Lisa";
+    socket["nickname"] = "Amonymous";
     console.log("Connected to Browser ✅");
     socket.on("close", onSocketClose);
     socket.on("message", (msg) => {
