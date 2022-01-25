@@ -18,9 +18,9 @@ wsServer.on("connection", (socket) => {
         console.log(`Socket Event: ${event}`);
     });
     socket.on("enter_room", (roomName, done) => {
-        console.log(roomName);
         socket.join(roomName);
         done();
+        socket.to(roomName).emit("welcome");
     });
 });
 
