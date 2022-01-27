@@ -11,8 +11,9 @@ html(lang="en")
             h1 Recorder
         main
             div#myStream
-                video#myFace(autoplay,playsinline, muted, width="400", height="400")
+                video#myFace(autoplay,playsinline, width="400", height="400")
                 button#mute 음소거
                 button#camera 카메라 끄기
+                select#cameras
         script(src="/socket.io/socket.io.js")
         script(src="/public/js/app.js")
